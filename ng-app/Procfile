@@ -1,2 +1,3 @@
 Rails: cd .. ; rails s
 Grunt: grunt serve
+Mongo: mongod --config /usr/local/etc/mongod.conf
