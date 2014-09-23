@@ -90,3 +90,128 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Main Page */
+.main {
+  margin-top: 50px;
+
+  .skillcard {
+    width: 100%;
+    background-color: #f39c12;
+    
+    border-radius: 5px;
+    padding: 5px;
+    display: table;
+    height: 65px;
+
+    .inner {
+      width: 95%;
+      height: 100%;
+      border-radius: 5px;
+      text-align: center;
+      background-color: #fff;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  .control {
+    text-align: center;
+    margin-bottom: 50px;
+
+    .skillcard {
+      position: absolute;
+      .inner {
+      }
+    }
+
+    h4 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .description {
+      position: absolute;
+      margin-top: 120px;
+    }
+
+    .buttons {
+      margin-top: 240px;
+    }
+
+    .btn-default:focus {
+      color: #333333;
+      background-color: white;
+      border-color: #cccccc;
+    }
+
+    h5 {
+      margin-top: 60px;
+    }
+
+    p.instructions, ul li {
+      text-align: left;
+    }
+
+    ul {
+      padding: 0 0 0 18px;
+    }
+
+    ul li {
+      padding-left: 10px;
+    }
+  }
+
+  .columns {
+
+    h5 {
+      text-align: center;
+      height: 65px;
+    }
+
+    .skillcard {
+      margin-bottom: 10px;
+      .inner {
+      }
+    }
+  }
+}
+
+
+
+.animate-enter, 
+.animate-leave
+{ 
+    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    position: relative;
+    display: block;
+} 
+ 
+.animate-enter.animate-enter-active, 
+.animate-leave {
+    opacity: 1;
+    top: 0;
+    height: 30px;
+}
+ 
+.animate-leave.animate-leave-active,
+.animate-enter {
+    opacity: 0;
+    top: -50px;
+    height: 0px;
+}
+
+
+.animate-enter {
+  -webkit-transition: 1s linear all; /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+ 
+.animate-enter.animate-enter-active {
+  opacity: 1;
+}

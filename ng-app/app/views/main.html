@@ -1,23 +1,52 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<div class="main">
+  <div class="columns" data-ng-controller="ColumnsCtrl">
+    <div class="col-lg-2">
+      <h5>{{ axes[0]["Name"] }}</h5>
+      <skillcard ng-repeat="skillcard in column_5"></skillcard>
+    </div>
+    <div class="col-lg-2">
+      <h5>{{ axes[1]["Name"] }}</h5>
+      <skillcard ng-repeat="skillcard in column_4"></skillcard>
+    </div>
+    <div class="col-lg-2">
+      <h5>{{ axes[2]["Name"] }}</h5>
+      <skillcard ng-repeat="skillcard in column_3"></skillcard>
+    </div>
+    <div class="col-lg-2">
+      <h5>{{ axes[3]["Name"] }}</h5>
+      <skillcard ng-repeat="skillcard in column_2"></skillcard>
+    </div>
+    <div class="col-lg-2">
+      <h5>{{ axes[4]["Name"] }}</h5>
+      <skillcard ng-repeat="skillcard in column_1"></skillcard>
+    </div>
+  </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+  <div class="control" data-ng-controller="SideCtrl">
+    <div class="col-lg-2">
+      <h4>Skill Cards</h4>
+      <skillcard ng-repeat="skillcard in skillcards"></skillcard>
+      <p class="description">
+        {{ description }}
+      </p>
+      <div class="btn-group buttons">
+        <button type="button" class="btn btn-default" data-ng-click="press(5)">5</button>
+        <button type="button" class="btn btn-default" data-ng-click="press(4)">4</button>
+        <button type="button" class="btn btn-default" data-ng-click="press(3)">3</button>
+        <button type="button" class="btn btn-default" data-ng-click="press(2)">2</button>
+        <button type="button" class="btn btn-default" data-ng-click="press(1)">1</button>
+      </div>
+      <h5>Instructions</h5>
+      <p class="instructions">
+        Sort the skills by selecting the option for each skill.
+        <ul>
+          <li>5 - Love using</li>
+          <li>4 - Like using</li>
+          <li>3 - Neutral</li>
+          <li>2 - Dislike using</li>
+          <li>1 - Hate using</li>
+        </ul>
+      </p>
+    </div>
+  </div>
 </div>

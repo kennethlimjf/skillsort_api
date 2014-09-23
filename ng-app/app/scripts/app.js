@@ -9,22 +9,20 @@
  * Main module of the application.
  */
 angular
-  .module('skillsortAppApp', [
+  .module('skillsortApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngTouch'
+    'ngTouch',
+    'skillsortApp.controllers.main',
+    'skillsortApp.directives.skillcard'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.4'
 gem 'rails-api'
-gem 'sqlite3'
+gem 'mongoid'
 
 
 # To use ActiveModel has_secure_password

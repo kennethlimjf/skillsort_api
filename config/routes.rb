@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   root to: redirect("/")
-  get 'api', to: 'api/skills#index'
+  namespace :api do
+    get 'skills', to: 'skills#index'
+    get 'axes', to: 'axes#index'
+  end
 end

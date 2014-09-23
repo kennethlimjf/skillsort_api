@@ -1,17 +1,8 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name skillsortAppApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the skillsortAppApp
- */
-angular.module('skillsortAppApp')
+angular.module('skillsortApp.controllers.main', ['skillsortApp.controllers.side', 'skillsortApp.controllers.columns'])
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.$on('moveCardEvent', function(event, src){
+      $scope.$broadcast('insertCardEvent', src);
+    });
   });
