@@ -17,4 +17,10 @@ angular.module('skillsortApp.controllers.side', ['skillsortApp.services.skills']
         $scope.description = "";
       }
     }
+
+    $scope.$on('returnCardEvent3', function(event, src){
+      $scope.skillcards.unshift(src);
+      $scope.description = $scope.skillcards[0]["Description"];
+      $scope.$apply();
+    });
   });

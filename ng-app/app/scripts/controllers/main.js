@@ -5,4 +5,7 @@ angular.module('skillsortApp.controllers.main', ['skillsortApp.controllers.side'
     $scope.$on('moveCardEvent', function(event, src){
       $scope.$broadcast('insertCardEvent', src);
     });
+    $scope.$on('returnCardEvent2', function(event, src){
+      $scope.$broadcast('returnCardEvent3', src);
+    });
   });

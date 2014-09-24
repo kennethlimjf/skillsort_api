@@ -177,41 +177,56 @@ body {
   }
 }
 
-
-
-.animate-enter, 
-.animate-leave
-{ 
-    -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    position: relative;
-    display: block;
-} 
- 
-.animate-enter.animate-enter-active, 
-.animate-leave {
-    opacity: 1;
-    top: 0;
-    height: 30px;
+/* scale up */
+@keyframes scaleUp {
+  from    { opacity: 0.3; -webkit-transform: scale(0.8); }
 }
- 
-.animate-leave.animate-leave-active,
-.animate-enter {
-    opacity: 0;
-    top: -50px;
-    height: 0px;
+@-moz-keyframes scaleUp {
+  from    { opacity: 0.3; -moz-transform: scale(0.8); }
+}
+@-webkit-keyframes scaleUp {
+  from    { opacity: 0.3; -webkit-transform: scale(0.8); }
 }
 
-
-.animate-enter {
-  -webkit-transition: 1s linear all; /* Chrome */
-  transition: 1s linear all;
-  opacity: 0;
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+  0% { -webkit-transform: rotateZ(0deg); }
+  20% { -webkit-transform: rotateZ(10deg); -webkit-animation-timing-function: ease-out; }
+  40% { -webkit-transform: rotateZ(17deg); }
+  60% { -webkit-transform: rotateZ(16deg); }
+  100% { -webkit-transform: translateY(100%) rotateZ(17deg); }
 }
- 
-.animate-enter.animate-enter-active {
-  opacity: 1;
+@-moz-keyframes rotateFall {
+  0% { -moz-transform: rotateZ(0deg); }
+  20% { -moz-transform: rotateZ(10deg); -moz-animation-timing-function: ease-out; }
+  40% { -moz-transform: rotateZ(17deg); }
+  60% { -moz-transform: rotateZ(16deg); }
+  100% { -moz-transform: translateY(100%) rotateZ(17deg); }
+}
+@keyframes rotateFall {
+  0% { transform: rotateZ(0deg); }
+  20% { transform: rotateZ(10deg); animation-timing-function: ease-out; }
+  40% { transform: rotateZ(17deg); }
+  60% { transform: rotateZ(16deg); }
+  100% { transform: translateY(100%) rotateZ(17deg); }
+}
+
+.card {
+}
+
+.card.ng-leave  { z-index:99; }
+.card.ng-enter  { z-index:88; }
+
+.card.ng-leave         {
+   -webkit-transform-origin: 0% 0%;
+  -webkit-animation: rotateFall 0.5s both ease-in;
+  -moz-transform-origin: 0% 0%;
+  -moz-animation: rotateFall 0.5s both ease-in;
+  transform-origin: 0% 0%;
+  animation: rotateFall 0.5s both ease-in;
+}
+.card.ng-enter    {  
+  -webkit-animation:scaleUp 0.5s both ease-in;
+  -moz-animation:scaleUp 0.5s both ease-in;
+  animation:scaleUp 0.5s both ease-in;    
 }
