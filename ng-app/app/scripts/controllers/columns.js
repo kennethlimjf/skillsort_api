@@ -28,7 +28,7 @@ angular.module('skillsortApp.controllers.columns', ['skillsortApp.services.axes'
       $scope.columns.forEach(function(column){
         if(column.indexOf(src) != -1){
           column.splice(column.indexOf(src), 1);
-          $scope.$apply();
+          $scope.$apply(); 
         }
       });
 

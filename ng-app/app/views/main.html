@@ -1,29 +1,29 @@
 <div class="main">
   <div class="columns" data-ng-controller="ColumnsCtrl">
-    <div class="col-lg-2">
+    <div class="col-sm-2">
       <h5>{{ axes[0]["Name"] }}</h5>
       <skillcard data-ng-repeat="skillcard in column_5"></skillcard>
     </div>
-    <div class="col-lg-2">
+    <div class="col-sm-2">
       <h5>{{ axes[1]["Name"] }}</h5>
       <skillcard data-ng-repeat="skillcard in column_4"></skillcard>
     </div>
-    <div class="col-lg-2">
+    <div class="col-sm-2">
       <h5>{{ axes[2]["Name"] }}</h5>
       <skillcard data-ng-repeat="skillcard in column_3"></skillcard>
     </div>
-    <div class="col-lg-2">
+    <div class="col-sm-2">
       <h5>{{ axes[3]["Name"] }}</h5>
       <skillcard data-ng-repeat="skillcard in column_2"></skillcard>
     </div>
-    <div class="col-lg-2">
+    <div class="col-sm-2">
       <h5>{{ axes[4]["Name"] }}</h5>
       <skillcard data-ng-repeat="skillcard in column_1"></skillcard>
     </div>
   </div>
 
   <div class="control" data-ng-controller="SideCtrl">
-    <div class="col-lg-2">
+    <div class="col-sm-2">
       <h4>Skill Cards</h4>
       <skillcard data-ng-repeat="skillcard in skillcards"></skillcard>
       <p class="description">
