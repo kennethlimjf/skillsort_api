@@ -2,6 +2,8 @@
 
 SortMySkills is a web application that allows user to play a simple card game to discover the skills they love to use and therefore, helps in finding their ideal career.
 
+The SortMySkills card game is designed by [Eugene Yan](https://github.com/eugeneyan), Data Scientist with BA (Hons) in Psychology, and coded by [Kenneth Lim](https://github.com/kennethlimjf).
+
 Front-end
 • HTML
 • CSS
